@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>natu.rizze - Calculadora de Gasto Calórico</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <h1>natu.rizze</h1>
+    <p>Calculadora de Gasto Calórico</p>
+</header>
+
+<div class="container">
+    <label for="idade">Idade (anos):</label>
+    <input type="number" id="idade" min="0">
+
+    <label for="peso">Peso (kg):</label>
+    <input type="number" id="peso" min="0">
+
+    <label for="altura">Altura (cm):</label>
+    <input type="number" id="altura" min="0">
+
+    <label for="sexo">Sexo:</label>
+    <select id="sexo">
+        <option value="masculino">Masculino</option>
+        <option value="feminino">Feminino</option>
+    </select>
+
+    <label for="atividade">Nível de Atividade Física:</label>
+    <select id="atividade">
+        <option value="1.2">Sedentário</option>
+        <option value="1.375">Levemente ativo</option>
+        <option value="1.55">Moderadamente ativo</option>
+        <option value="1.725">Muito ativo</option>
+        <option value="1.9">Extremamente ativo</option>
+    </select>
+
+    <label for="objetivo">Objetivo:</label>
+    <select id="objetivo">
+        <option value="perder">Perder peso</option>
+        <option value="manter">Manter peso</option>
+        <option value="ganhar">Ganhar peso</option>
+    </select>
+
+    <button onclick="calcularGastoCalorico()">Calcular</button>
+
+    <div class="resultado" id="resultado"></div>
+
+    <canvas id="grafico"></canvas>
+</div>
+
+<!-- Chart.js CDN -->
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script src="script.js"></script>
+
+</body>
+</html>
